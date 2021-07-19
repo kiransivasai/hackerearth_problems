@@ -1,0 +1,19 @@
+s=input()
+t=input()
+l=''.join(sorted(s+t))
+print(l)
+temp=[]
+out=''
+i=0
+while(i<len(l)-1):
+    if(l[i]==l[i+1]):
+        out=l[i]+out+l[i+1]
+        i+=1
+    else:
+        temp.append(l[i])
+    i+=1
+if(len(temp)==0):
+    print(len(out))
+else:
+    print(len(out)+1)
+print(temp,out)

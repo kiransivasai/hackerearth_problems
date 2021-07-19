@@ -1,0 +1,31 @@
+fib='0112358'
+for _ in range(int(input())):
+    s=input()
+    a=s[0]
+    l=fib.find(a)
+    m=l-1
+    f1=int(fib[m])
+    f2=int(fib[l])
+    if(f2==0):
+        f1=1
+    if(s[:2]=='12'):
+        f1=f2=1
+    i=1
+    c=0
+    if(l==-1):
+        print("Invalid")
+    else:
+        while(i<len(s)):
+            b=str(f1+f2)
+            d=len(b)
+            if(b!=s[i:i+d]):
+                c=1
+                break
+            f1=f2
+            f2=int(b)
+            i+=d
+        if(c==0):
+            print("Valid")
+        else:
+            print("Invalid")
+        

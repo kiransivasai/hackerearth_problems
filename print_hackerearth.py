@@ -1,0 +1,11 @@
+s=int(input())
+n=input()
+a=[]
+a.append(n.count('h')//2)
+a.append(n.count('a')//2)
+a.append(n.count('c'))
+a.append(n.count('k'))
+a.append(n.count('e')//2)
+a.append(n.count('r')//2)
+a.append(n.count('t'))
+print(min(a))
